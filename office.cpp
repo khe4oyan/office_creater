@@ -1,4 +1,4 @@
-﻿#include "functions.h"
+﻿#include "function.h"
 
 /* ---RULES by Hayk Darbinyan---
 	1. don't use static arrays
@@ -9,13 +9,12 @@
 */
 
 /*
-	ստեղծեք մեկ Office օբյեկտ և տվյալ օբյեկը արժեքավորեք create_office ֆունկցիայի միջոցով։ 
+	ստեղծեք մեկ Office օբյեկտ և տվյալ օբյեկը արժեքավորեք create_office ֆունկցիայի միջոցով։
 	Այնուհետև գրել ֆունկցիա, որը կվերադարձնի վեց ամիս անց տվյալ օբյեկտի հաշվեկշռին մնացած գումարի չափսը։
 */
 
 int main() {
-	Office *f = create_office();
-	count_money_month(f);
-
-	office_delete(f);
+	ofc::Office* f = ofc::create_office();
+	ofc::count_money_month(f);
+	ofc::office_delete(f);
 }
